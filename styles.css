@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: dark;
+  --background: #393e46;
+  --accent: #4ecca3;
+  --text: #eeeeee;
+  --shadow: #232931;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  color: var(--text);
+  text-align: center;
+}
+
+.container {
+  width: min(100%, 900px);
+  margin: auto;
+}
+
+.result {
+  margin: 0 0 2rem;
+  color: var(--accent);
+  font-family: "Lobster", cursive;
+  font-size: clamp(2.75rem, 9vw, 6rem);
+  font-weight: 400;
+  line-height: 1.15;
+  text-shadow: 4px 3px 0 var(--shadow);
+}
+
+.players {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(1.5rem, 7vw, 5rem);
+}
+
+.dice {
+  width: min(38%, 230px);
+}
+
+.dice p {
+  margin: 0 0 1rem;
+  color: var(--accent);
+  font-family: "Indie Flower", cursive;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.die-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.instruction {
+  margin: 2.5rem 0 0;
+  color: var(--text);
+  font-family: "Indie Flower", cursive;
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+footer {
+  padding-top: 2rem;
+  color: var(--text);
+  font-family: "Indie Flower", cursive;
+  font-size: 1rem;
+  opacity: 0.75;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1.5rem 1rem 1rem;
+  }
+
+  .result {
+    margin-bottom: 2.5rem;
+  }
+
+  .players {
+    gap: 1.25rem;
+  }
+
+  .dice {
+    width: 42%;
+  }
+
+  .instruction {
+    margin-top: 2rem;
+    font-size: 1.05rem;
+  }
+}
